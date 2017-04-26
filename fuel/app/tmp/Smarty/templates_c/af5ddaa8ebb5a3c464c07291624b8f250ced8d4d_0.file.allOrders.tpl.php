@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-04-26 10:29:24
+/* Smarty version 3.1.31, created on 2017-04-26 11:28:59
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\admin\allOrders.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5900aec4ee8273_27200622',
+  'unifunc' => 'content_5900bcbbc25753_44443554',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'af5ddaa8ebb5a3c464c07291624b8f250ced8d4d' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\admin\\allOrders.tpl',
-      1 => 1493216948,
+      1 => 1493220537,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5900aec4ee8273_27200622 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5900bcbbc25753_44443554 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -28,23 +28,23 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_16513752685900aec4e3e519_69245412', "localstyle");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19996380555900bcbbb8e343_89741385', "localstyle");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4711911555900aec4e491d1_03474561', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2211955875900bcbbb98686_87095683', "content");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "localstyle"} */
-class Block_16513752685900aec4e3e519_69245412 extends Smarty_Internal_Block
+class Block_19996380555900bcbbb8e343_89741385 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_16513752685900aec4e3e519_69245412',
+    0 => 'Block_19996380555900bcbbb8e343_89741385',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -63,12 +63,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "localstyle"} */
 /* {block "content"} */
-class Block_4711911555900aec4e491d1_03474561 extends Smarty_Internal_Block
+class Block_2211955875900bcbbb98686_87095683 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_4711911555900aec4e491d1_03474561',
+    0 => 'Block_2211955875900bcbbb98686_87095683',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -83,15 +83,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['order']->value) {
 ?>
             <tr>
                 <td>
-                    <a href="showOrder.php?order_id=<?php echo $_smarty_tpl->tpl_vars['order']->value->id;?>
-">
-                    Order #<?php echo $_smarty_tpl->tpl_vars['order']->value->id;?>
+                    <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['html_anchor'][0][0]->html_anchor(array('href'=>"/show/order/".((string)$_smarty_tpl->tpl_vars['order']->value->id),'text'=>"Order #".((string)$_smarty_tpl->tpl_vars['order']->value->id)),$_smarty_tpl);?>
 
-                    </a>
                 </td>
-                <td>Time Placed:<?php echo $_smarty_tpl->tpl_vars['order']->value->created_at;?>
+                <td><strong>Time Placed:</strong><?php echo $_smarty_tpl->tpl_vars['order']->value->created_at;?>
 </td>
-                <td>for:<?php echo $_smarty_tpl->tpl_vars['order']->value->user->name;?>
+                <td><strong>for:</strong><?php echo $_smarty_tpl->tpl_vars['order']->value->user->name;?>
 </td>
             </tr>
         <?php

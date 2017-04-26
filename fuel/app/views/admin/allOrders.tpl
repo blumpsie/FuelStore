@@ -21,12 +21,10 @@ Author: Mark Erickson
         {foreach $orders as $order}
             <tr>
                 <td>
-                    <a href="">
-                    Order #{$order->id}
-                    </a>
+                    {html_anchor href="/show/order/{$order->id}" text="Order #{$order->id}"}
                 </td>
-                <td>Time Placed:{$order->created_at}</td>
-                <td>for:{$order->user->name}</td>
+                <td><strong>Time Placed:</strong>{$order->created_at}</td>
+                <td><strong>for:</strong>{$order->user->name}</td>
             </tr>
         {/foreach}
     </table>
