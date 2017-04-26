@@ -144,3 +144,47 @@ WARNING - 2017-04-26 12:02:53 --> Fuel\Core\Fuel::init - The configured locale e
 WARNING - 2017-04-26 12:02:54 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2017-04-26 12:02:57 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2017-04-26 12:02:57 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:26:40 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:26:43 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:26:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:26:46 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:26:46 --> Notice - Undefined property: Controller_User::$sessionUser in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\classes\controller\user.php on line 19
+WARNING - 2017-04-26 12:35:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:35:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:35:29 --> Notice - Undefined variable: theuser in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\classes\controller\user.php on line 20
+WARNING - 2017-04-26 12:35:34 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:35:47 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:35:47 --> Notice - Uninitialized string offset: 0 in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\core\classes\finder.php on line 305
+WARNING - 2017-04-26 12:35:53 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:36:19 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:36:19 --> Notice - Undefined property: Controller_User::$sessionUser in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\classes\controller\user.php on line 19
+WARNING - 2017-04-26 12:36:23 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:41:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:41:25 --> Notice - Undefined variable: login in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\classes\controller\user.php on line 19
+WARNING - 2017-04-26 12:42:58 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:44:00 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:44:00 --> Notice - Undefined variable: login in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\classes\controller\user.php on line 19
+WARNING - 2017-04-26 12:44:07 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:44:11 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:44:11 --> Notice - Undefined variable: login in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\classes\controller\user.php on line 21
+WARNING - 2017-04-26 12:45:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:45:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:45:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:45:54 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:45:55 --> Notice - Undefined variable: user in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\classes\controller\user.php on line 28
+WARNING - 2017-04-26 12:46:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:46:36 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:46:36 --> Notice - Uninitialized string offset: 0 in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\core\classes\finder.php on line 305
+WARNING - 2017-04-26 12:46:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:47:09 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:47:09 --> Notice - Uninitialized string offset: 0 in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\core\classes\finder.php on line 305
+WARNING - 2017-04-26 12:48:15 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:48:19 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 12:48:19 --> Error - The requested view could not be found: /user/myOrders.tpl.smarty in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\core\classes\view.php on line 490
+WARNING - 2017-04-26 12:49:09 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:49:13 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:49:20 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:49:34 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:49:37 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:49:38 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 12:49:40 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
