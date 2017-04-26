@@ -23,22 +23,25 @@
 {block name="content"}
 
   <div class='top'>
+      {$category}
+      {$order}
     <h2>Products</h2>
     {form}
       <button type="submit">Filter by Category:</button>
-      <select>
+      <select name="category">
+          {html_options options=$categories selected=$category}
       </select>
     {/form}
   </div>
-
+  
   <table class="table table-hover table-condensed">
     <tr>
       <th>
-        {html_anchor href="#" text="name"}
+        {html_anchor href="/home/setProductOrder/name" text="name"}
       </th>
       <th>category</th>
       <th class="price">
-        {html_anchor href="#" text="price"}
+        {html_anchor href="/home/setProductOrder/price" text="price"}
       </th>
     </tr>
     {foreach $products as $product}

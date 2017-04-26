@@ -16,10 +16,14 @@ class Validators {
         ->add_rule('trim')
         ->add_rule('required')
         ->add_rule(['unique' => $isUnique])
+        ->add_rule('min_length', 3)
+        ->add_rule('match_pattern', '/^[a-zA-Z]+$/')
     ;
     $validator
         ->set_message('required', ':label cannot be empty')
         ->set_message('unique', 'a duplicate exists')
+        ->set_message('min_length', 'at least 3 chars')
+        ->set_message('match_pattern', 'must be only letters')
     ;
 
     return $validator;
