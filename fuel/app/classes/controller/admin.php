@@ -173,5 +173,31 @@ class Controller_Admin extends Controller_Base {
         $view = View::forge("admin/allOrders.tpl", $data);
         return $view;
     }
+    
+    public function action_removeOrder($order_id)
+    {
+        $order = Model_Order::find($order_id);
+        $selections = Model_Selection::find('all', [
+            "where" => [['order_id', $order->id]],
+        ]);
+        $confirm = Input::param('confirm');
+        
+        if(!$confirm)
+        {
+            Session::set_flash('confirm', 1);
+            Session::set_flash('message', 'Are you sure?');
+            Session::set_flash('button_title', "Confirm Remove");
+            return Response::redirect("/show/order/$order_id");
+        }
+        
+        foreach($selections as $selection)
+        {
+            $selection->delete();
+        }
+        
+        $order->delete();
+        
+        return Response::redirect('/');
+    }
 }
 

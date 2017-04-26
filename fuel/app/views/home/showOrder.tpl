@@ -66,14 +66,14 @@ Author: Mark Erickson
     
     {if $session->get('login')->is_admin}
     <div class='action'>
-        <form action='removeOrder.php' method='get'>
-            <input type='hidden' name='order_id' value='{$order->id}'>
+        {form attrs=['action' => "/admin/removeOrder/{$order->id}", 
+                'method'=>'get']}
             <button type='submit'>
                 {{session_get_flash var='button_title'}|default:'Remove'}
             </button>
             <input type='hidden' name='confirm'
                    value='{session_get_flash var='confirm'}' />
-        </form>
+        {/form}
     </div>
     <h4 id='message'>
          {session_get_flash var='message'}    

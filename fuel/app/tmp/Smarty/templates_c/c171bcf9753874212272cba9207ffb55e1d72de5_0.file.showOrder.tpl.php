@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-04-26 11:39:19
+/* Smarty version 3.1.31, created on 2017-04-26 13:08:21
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\home\showOrder.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5900bf27050792_16835367',
+  'unifunc' => 'content_5900d4056c03c0_86179078',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c171bcf9753874212272cba9207ffb55e1d72de5' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\home\\showOrder.tpl',
-      1 => 1493221152,
+      1 => 1493226405,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5900bf27050792_16835367 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5900d4056c03c0_86179078 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,21 +29,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14336546965900bf26ea5016_04945301', "localstyle");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_95891645900d405546568_61261635', "localstyle");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14474477635900bf26eae612_86869146', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7880634585900d405556b80_79434326', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "localstyle"} */
-class Block_14336546965900bf26ea5016_04945301 extends Smarty_Internal_Block
+class Block_95891645900d405546568_61261635 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_14336546965900bf26ea5016_04945301',
+    0 => 'Block_95891645900d405546568_61261635',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -68,12 +68,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "localstyle"} */
 /* {block "content"} */
-class Block_14474477635900bf26eae612_86869146 extends Smarty_Internal_Block
+class Block_7880634585900d405556b80_79434326 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_14474477635900bf26eae612_86869146',
+    0 => 'Block_7880634585900d405556b80_79434326',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -140,9 +140,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
     
     <?php if ($_smarty_tpl->tpl_vars['session']->value->get('login')->is_admin) {?>
     <div class='action'>
-        <form action='removeOrder.php' method='get'>
-            <input type='hidden' name='order_id' value='<?php echo $_smarty_tpl->tpl_vars['order']->value->id;?>
-'>
+        <?php $_block_plugin1 = isset($_smarty_tpl->smarty->registered_plugins['block']['form'][0][0]) ? $_smarty_tpl->smarty->registered_plugins['block']['form'][0][0] : null;
+if (!is_callable(array($_block_plugin1, 'form'))) {
+throw new SmartyException('block tag \'form\' not callable or registered');
+}
+$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('form', array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id),'method'=>'get')));
+$_block_repeat=true;
+echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id),'method'=>'get')), null, $_smarty_tpl, $_block_repeat);
+while ($_block_repeat) {
+ob_start();
+?>
+
             <button type='submit'>
                 <?php ob_start();
 echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['session_get_flash'][0][0]->session_get_flash(array('var'=>'button_title'),$_smarty_tpl);
@@ -153,7 +161,11 @@ echo (($tmp = @$_prefixVariable1)===null||$tmp==='' ? 'Remove' : $tmp);?>
             <input type='hidden' name='confirm'
                    value='<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['session_get_flash'][0][0]->session_get_flash(array('var'=>'confirm'),$_smarty_tpl);?>
 ' />
-        </form>
+        <?php $_block_repeat=false;
+echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id),'method'=>'get')), ob_get_clean(), $_smarty_tpl, $_block_repeat);
+}
+array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
+
     </div>
     <h4 id='message'>
          <?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['session_get_flash'][0][0]->session_get_flash(array('var'=>'message'),$_smarty_tpl);?>
