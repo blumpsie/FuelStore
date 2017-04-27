@@ -31,15 +31,22 @@
   </div>
 
   <div class="action">
-    {form attrs=[action=>"#", method=>"get"]}
-    <b>Selected quantity</b>
-    <br />
-    <select>
-    </select>
-    <button type="submit">Change Quantity</button>
-    {/form}
-  </div>
-
+      {if not $session->get('login') or not $session->get('login')->is_admin}
+        {form attrs=[action=>"#", method=>"get"]}
+            <b>Selected quantity</b>
+            <br />
+            <select name='quantity'>
+                {html_options options=$quantities}
+            </select>
+            <button type="submit">Change Quantity</button>
+        {/form}
+      {else}
+        {form attrs=['action'=>"admin/modifyProduct/{$product->id}"]}
+            <button type="submit">Modify</button>
+        {/form}
+      {/if}
+    </div>
+    
   <h4 id='message'>
     {session_get_flash var='message'}    
   </h4>

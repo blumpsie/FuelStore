@@ -223,3 +223,50 @@ WARNING - 2017-04-26 13:38:16 --> Fuel\Core\Fuel::init - The configured locale e
 WARNING - 2017-04-26 13:38:17 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2017-04-26 13:38:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2017-04-26 13:38:27 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:15:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:15:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:19:37 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:19:41 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:19:42 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:19:47 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:41:19 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:41:21 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:41:24 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:52:16 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:52:16 --> Error - Syntax error in template "file:C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\home\productSelect.tpl"  on line 43 "{form attrs=['action'=>"admin/modifyProduct/$product->id"}"  - Unexpected "}", expected one of: "","" , "]" in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatecompilerbase.php on line 43
+WARNING - 2017-04-26 15:54:26 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:54:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:54:29 --> Error - Syntax error in template "file:C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\home\productSelect.tpl"  on line 43 "{form attrs=['action'=>"admin/modifyProduct/{$product->id}"}"  - Unexpected "}", expected one of: "","" , "]" in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatecompilerbase.php on line 43
+WARNING - 2017-04-26 15:55:19 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:55:20 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:55:21 --> Error - Syntax error in template "file:C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\home\productSelect.tpl"  on line 43 "{form attrs=['action'=>"admin/modifyProduct/$product->id"}"  - Unexpected "}", expected one of: "","" , "]" in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\vendor\smarty\smarty\libs\sysplugins\smarty_internal_templatecompilerbase.php on line 43
+WARNING - 2017-04-26 15:55:57 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:55:59 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:55:59 --> Notice - Undefined property: stdClass::$is_Admin in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\tmp\Smarty\templates_c\6070b3d16cb00b6f4a0d684e498ec4966d8ba123_0.file.productSelect.tpl.php on line 99
+WARNING - 2017-04-26 15:56:12 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:56:14 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:56:15 --> Runtime Recoverable error - Object of class Model_Product could not be converted to string in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\tmp\Smarty\templates_c\6070b3d16cb00b6f4a0d684e498ec4966d8ba123_0.file.productSelect.tpl.php on line 126
+WARNING - 2017-04-26 15:57:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:57:24 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:57:30 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:57:31 --> Notice - Undefined index: product_id in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\tmp\Smarty\templates_c\ca75e4380c9c3bd674e46ac29be91022b9254d1d_0.file.modifyProduct.tpl.php on line 93
+WARNING - 2017-04-26 15:58:30 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:58:32 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:58:32 --> Runtime Recoverable error - Object of class Model_Category could not be converted to string in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\tmp\Smarty\templates_c\ca75e4380c9c3bd674e46ac29be91022b9254d1d_0.file.modifyProduct.tpl.php on line 108
+WARNING - 2017-04-26 15:59:07 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:59:09 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2017-04-26 15:59:10 --> User Notice - html_options: selected attribute is an object of class 'Model_Photo' without __toString() method in C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\vendor\smarty\smarty\libs\plugins\function.html_options.php on line 91
+WARNING - 2017-04-26 15:59:46 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 15:59:49 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:00:05 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:00:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:00:40 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:00:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:01:08 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:01:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:01:43 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:02:08 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:02:14 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:02:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:04:05 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2017-04-26 16:04:11 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.

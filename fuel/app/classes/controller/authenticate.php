@@ -55,4 +55,60 @@ class Controller_Authenticate extends Controller_Base {
   public function action_noaccess() {
     return View::forge("authenticate/noAccess.tpl");
   }
+  
+  public function action_createLogin()
+  {
+      $validator = Validation::forge();
+      
+      $data = [
+          
+      ];
+      $view =View::forge("authenticate/createLogin.tpl", $data);
+      $view->set_safe('validator', $validator);
+      return $view;
+  }
+  
+  public function action_createLoginReentrant()
+  {
+      $cancel = Input::post('cancel');
+      if (!is_null($cancel))
+      {
+          return Response::redirect("/");
+      }
+      
+      $validator = Validators::createLoginValidator();
+      
+      $message = "";
+      try
+      {
+          $validated = $validator->run(Input::post());
+          if (!$validated) 
+          {
+              throw new Exception();
+          }
+          $validData = $validator->validated();
+          
+          $user = Model_User::forge();
+          
+          $user->name = $validData['name'];
+          $user->binding = $validData['email'];
+          $user->password = $validData['password'];
+          $user->save();
+          
+          return Response::redirect("/authenticate/login");
+      } catch (Exception $ex) {
+          $message = $ex->getMessage();
+      }
+      
+      $data = [
+          'name' => Input::post('name'),
+          'email' => Input::post('email'),
+          'password' => Input::post('password'),
+          'message' => $message,
+      ];
+      
+      $view = View::forge("authenticate/createLogin.tpl", $data);
+      $view->set_safe('validator', $validator);
+      return $view;
+  }
 }

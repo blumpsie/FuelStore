@@ -199,5 +199,78 @@ class Controller_Admin extends Controller_Base {
         
         return Response::redirect('/');
     }
+    
+    public function action_modifyProduct($product_id)
+    {
+        $product = Model_Product::find($product_id);
+        
+        $validator = Validation::forge();
+        $data = [
+            'categories' => $this->getCategories(),
+            'photos' => $this->getPhotos(),
+            'name' => $product->name,
+            'category' => $product->category,
+            'price' => $product->price,
+            'description' => $product->description,
+            'photo' => $product->photo,
+            'product_id' => $product_id,
+        ];
+        
+        $view = View::forge("admin/modifyProduct.tpl", $data);
+        $view->set_safe('validator', $validator);
+        return $view;
+    }
+    
+    public function action_modifyProductReentrant($product_id)
+    {
+        $cancel = Input::post('cancel');
+        if (!is_null($cancel))
+        {
+            return Response::redirect("/cart/show/$product_id");
+        }
+        
+        $product = Model_Product::find($product_id);
+        
+        $validator = Validators::modifyProductValidator($product_id);
+        
+        try
+        {
+            $validated = $validator->run(Input::post());
+            if (!$validated)
+            {
+                throw new Exception();
+            }
+            
+            $validData = $validator->validated();
+            
+            $product->name = $validData['name'];
+            $product->category_id = $validData['category_id'];
+            $product->price = $validData['price'];
+            $product->description = $validData['description'];
+            $product->photo_id = $validData['photo_id'];
+            $book->save();
+            
+            return Response::redirect("/cart/show/$product->id");
+        } catch (Exception $ex) {
+            $message = $ex->getMessage();
+        }
+        
+        $data = [
+            'categories' => $this->getCategories(),
+            'photos' => $this->getPhotos(),
+            'name' => Input::post('name'),
+            'category' => Input::post('category'),
+            'price' => Input::post('price'),
+            'description' => Input::post('description'),
+            'photo' => Input::post('photo_id'),
+            'product_id' => $product_id,
+            //'photo_id' => $product->photo_id,
+            'message' => $message,
+        ];
+        
+        $view = View::forge("admin/modifyProduct.tpl", $data);
+        $view->set_safe('validator', $validator);
+        return $view;
+    }
 }
 

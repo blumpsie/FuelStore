@@ -17,47 +17,39 @@
 {/block}
 
 {block name="content"}
-    <h2>Add Product</h2>
+    <h2>Create Login</h2>
     
-    {form attrs=['action' => "/admin/addProductReentrant"]}
+    {form attrs=['action' => "/authenticate/createLoginReentrant"]}
     <table class="table table-condensed">
         <tr>
-            <td>Name: </td>
+            <td>Name:</td>
             <td>
                 <input class="form-control" type="text" name="name"
                        value="{$name|default}" />
                 <span class="error">{$validator->error_message('name')}</span>
-        </tr>
-        <tr>
-            <td>Category:</td>
-            <td>
-                <select name="category_id">
-                    {html_options options=$categories}
-                </select>
             </td>
         </tr>
         <tr>
-            <td>Price: </td>
+            <td>E-mail:</td>
             <td>
-                <input class="form-control" type="text" name="price"
-                       value="{$price|default}" />
-                <span class="error">{$validator->error_message('price')}</span>
+                <input class="form-control" type="text" name="email"
+                       value="{$email|default}" />
+                <span class="error">{$validator->error_message('email')}</span>
             </td>
         </tr>
         <tr>
-            <td>Description: </td>
+            <td>Password:</td>
             <td>
-                <textarea class="form-control" name="description" rows="10"
-                              value="{$description|default}">
-                </textarea>
+                <input class="form-control" type="text" name="password"
+                       value="{$password|default}" />
+                <span class="error">{$validator->error_message('password')}</span>
             </td>
         </tr>
         <tr>
-            <td>Photo: </td>
+            <td>Confirm Password:</td>
             <td>
-                <select name='photo_id'>
-                    {html_options options=$photos}
-                </select>
+                <input class="form-control" type="text" name="password_confirm"
+                       value="{$password_confirm|default}" />
             </td>
         </tr>
         <tr>

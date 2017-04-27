@@ -122,5 +122,36 @@ class Validators {
     ;
     return $validator;
   }
+  
+  public static function createLoginValidator()
+  {
+      $isUnique = function($name) {
+      $userWithName = Model_User::find('first', [
+              'where' => [
+                  ['name', $name]
+              ]
+      ]);
+      return is_null($userWithName);
+    };
+    
+    $validator = Validation::forge();
 
+    $validator->add('name', 'name')
+        ->add_rule('trim')
+        ->add_rule('required')
+        ->add_rule('min_length', 3)
+        ->add_rule(['unique' => $isUnique])
+    ;
+    
+    $validator->add('email', 'email')
+        ->add_rule('trim')
+        ->add_rule('required')
+        ->add_rule('valid_email')
+    ;
+    
+    $validator->add('price', 'price')
+        ->add_rule('trim')
+        ->add_rule('required')
+    ;
+  }
 }

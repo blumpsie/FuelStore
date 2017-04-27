@@ -3,6 +3,7 @@
 {if not $session->get('login')}
     <li>{html_anchor href="/cart" text="Cart"}</li>
     <li>{html_anchor href='/authenticate/login' text='Login'}</li>
+    <li>{html_anchor href='/authenticate/createLogin' text='Create Login'}</li>
 {/if}
 
 {*if logged in but not admin*}
