@@ -10,10 +10,10 @@ class Controller_Cart extends Controller_Base {
 
   public function action_show($product_id) {
     $product = Model_Product::find($product_id);
-    $quantities = range(0, 10);
+    $quantities = range(0,10);
     $data = [
         'product' => $product,
-        'qunatities' => $quantities,
+        'quantities' => $quantities,
     ];
     $view = View::forge('home/productSelect.tpl', $data);
     $view->set_safe('description', $product->description);
@@ -25,7 +25,7 @@ class Controller_Cart extends Controller_Base {
     $itemsInCart = true;
     
     // logic for deleting from the cart
-    if (!is_null($product_id) && $quantity == 0)
+    if (!is_null($product) && $quantity == 0)
     {
         Session::delete($product_id);
         if(is_null(Session::get('cart')))
