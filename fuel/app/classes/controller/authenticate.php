@@ -76,13 +76,12 @@ class Controller_Authenticate extends Controller_Base {
           return Response::redirect("/");
       }
       
-     // $validator = Validators::createLoginValidator();
+      //$validator = Validators::createLoginValidator();
       
       $message = "";
       try
       {
-          /*
-          $validated = $validator->run(Input::post());
+          /*$validated = $validator->run(Input::post());
           if (!$validated) 
           {
               throw new Exception();
@@ -90,10 +89,10 @@ class Controller_Authenticate extends Controller_Base {
           $validData = $validator->validated();
           */
           $user = Model_User::forge();
-          
-          $user->name = 'name';
-          $user->email = 'email';
-          $user->password = 'password';
+          $password = Input::post('password');
+          $user->name = Input::post('name');
+          $user->email = Input::post('email');
+          $user->password = hash('sha256', $password);
           $user->save();
           
           return Response::redirect("/authenticate/login");

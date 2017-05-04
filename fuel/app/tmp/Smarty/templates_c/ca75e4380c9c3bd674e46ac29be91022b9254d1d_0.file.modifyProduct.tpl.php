@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-04-27 08:27:52
+/* Smarty version 3.1.31, created on 2017-05-03 10:53:18
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\admin\modifyProduct.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5901e3c89f9ca4_06620170',
+  'unifunc' => 'content_5909eedea4cf13_96279535',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ca75e4380c9c3bd674e46ac29be91022b9254d1d' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\admin\\modifyProduct.tpl',
-      1 => 1493296069,
+      1 => 1493823190,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5901e3c89f9ca4_06620170 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5909eedea4cf13_96279535 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\vendor\\smarty\\smarty\\libs\\plugins\\function.html_options.php';
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
@@ -30,23 +30,23 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6573359135901e3c8917fd6_26848612', "localstyle");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15445911565909eede972d44_34607172', "localstyle");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7180462755901e3c8922325_64883027', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12627423615909eede97cb70_15297798', "content");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "localstyle"} */
-class Block_6573359135901e3c8917fd6_26848612 extends Smarty_Internal_Block
+class Block_15445911565909eede972d44_34607172 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_6573359135901e3c8917fd6_26848612',
+    0 => 'Block_15445911565909eede972d44_34607172',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -65,12 +65,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "localstyle"} */
 /* {block "content"} */
-class Block_7180462755901e3c8922325_64883027 extends Smarty_Internal_Block
+class Block_12627423615909eede97cb70_15297798 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7180462755901e3c8922325_64883027',
+    0 => 'Block_12627423615909eede97cb70_15297798',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -102,7 +102,7 @@ ob_start();
             <tr>
                 <td>Category:</td>
                 <td>
-                    <?php echo (($tmp = @$_smarty_tpl->tpl_vars['category']->value->name)===null||$tmp==='' ? '' : $tmp);?>
+                    <?php echo (($tmp = @$_smarty_tpl->tpl_vars['category']->value)===null||$tmp==='' ? '' : $tmp);?>
 
                 </td>
             </tr>
@@ -124,12 +124,10 @@ ob_start();
                 </td>
             </tr>
             <tr>
-                <td>Photo:<?php echo $_smarty_tpl->tpl_vars['photo']->value->id;?>
-</td>
+                <td>Photo:</td>
                 <td>
                     <select class="form-control" name="photo">
-                        
-                        <?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['photos']->value),$_smarty_tpl);?>
+                        <?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['photos']->value,'selected'=>$_smarty_tpl->tpl_vars['photo']->value),$_smarty_tpl);?>
 
                     </select>
                 </td>

@@ -32,7 +32,7 @@ Author: Mark Erickson
             <tr>
                 <td>Category:</td>
                 <td>
-                    {$category->name|default}
+                    {$category|default}
                 </td>
             </tr>
             <tr>
@@ -54,7 +54,7 @@ Author: Mark Erickson
                 <td>Photo:</td>
                 <td>
                     <select class="form-control" name="photo">
-                        {html_options options=$photos selected=$photo->id}
+                        {html_options options=$photos selected=$photo}
                     </select>
                 </td>
             </tr>

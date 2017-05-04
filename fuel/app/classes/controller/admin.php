@@ -45,8 +45,6 @@ class Controller_Admin extends Controller_Base {
         $validator = Validation::forge();
         $data = [
             'categories' => $this->getCategories(),
-            'reentrantUrl' => "admin/addCategoryReentrant",
-            'page_title' => 'Add a Category',
         ];
         
         $view = View::forge("admin/addCategory.tpl", $data);
@@ -103,8 +101,6 @@ class Controller_Admin extends Controller_Base {
         $data = [
             'categories' => $this->getCategories(),
             'photos' => $this->getPhotos(),
-            'reentrantUrl' => "admin/addProductReentrant",
-            'page_title' => "Add Product"
         ];
         
         $view = View::forge("admin/addProduct.tpl", $data);
@@ -209,10 +205,10 @@ class Controller_Admin extends Controller_Base {
             'categories' => $this->getCategories(),
             'photos' => $this->getPhotos(),
             'name' => $product->name,
-            'category' => $product->category,
+            'category' => $product->category->name,
             'price' => $product->price,
             'description' => $product->description,
-            'photo' => $product->photo,
+            'photo' => $product->photo->id,
             'product_id' => $product_id,
         ];
         
@@ -248,7 +244,7 @@ class Controller_Admin extends Controller_Base {
             $product->price = $validData['price'];
             $product->description = $validData['description'];
             $product->photo_id = $validData['photo_id'];
-            $book->save();
+            $product->save();
             
             return Response::redirect("/cart/show/$product->id");
         } catch (Exception $ex) {
@@ -259,12 +255,12 @@ class Controller_Admin extends Controller_Base {
             'categories' => $this->getCategories(),
             'photos' => $this->getPhotos(),
             'name' => Input::post('name'),
-            'category' => Input::post('category'),
+            'category' => $product->category->name,
             'price' => Input::post('price'),
             'description' => Input::post('description'),
             'photo' => Input::post('photo_id'),
             'product_id' => $product_id,
-            //'photo_id' => $product->photo_id,
+            'photo' => $product->photo->id,
             'message' => $message,
         ];
         

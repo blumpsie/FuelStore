@@ -15,8 +15,8 @@ class Controller_Home extends Controller_Base {
     foreach (Model_Category::find('all') as $category) {
       $categories[$category->id] = $category->name;
     }
-    $category = Input::post('category');
-    Session::set('category_id', $category);
+    
+   Session::set('category_id', Input::post('category'));
     
    if (Session::get('category_id') == 0)
    {
@@ -36,7 +36,7 @@ class Controller_Home extends Controller_Base {
     $data = [
         'products' => $products,
         'categories' => $categories,
-        'category' => Session::get('category_id'),
+        'category' => Input::post('category'),
         'order' => Session::get('order'),
     ];
     return View::forge('home/index.tpl', $data);
