@@ -27,6 +27,7 @@
                 <input class="form-control" type="text" name="name"
                        value="{$name|default}" />
                 <span class="error">{$validator->error_message('name')}</span>
+            </td>
         </tr>
         <tr>
             <td>Category:</td>
@@ -47,9 +48,7 @@
         <tr>
             <td>Description: </td>
             <td>
-                <textarea class="form-control" name="description" rows="10"
-                              value="{$description|default}">
-                </textarea>
+                <textarea class="form-control" name="description" rows="10"></textarea>
             </td>
         </tr>
         <tr>

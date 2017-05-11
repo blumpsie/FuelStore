@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-04-27 12:53:58
+/* Smarty version 3.1.31, created on 2017-05-11 13:17:28
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\authenticate\createLogin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_590222264b3580_44211594',
+  'unifunc' => 'content_59149ca81500a1_91657723',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3c2c7bd0542a797067a75bb2ba9e3f3d4d0e828a' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\authenticate\\createLogin.tpl',
-      1 => 1493312032,
+      1 => 1494523032,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_590222264b3580_44211594 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59149ca81500a1_91657723 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,23 +29,23 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_27009844659022225a06a15_59769757', 'localstyle');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_180088294259149ca80a4e80_98564455', 'localstyle');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10645397759022225a11581_35902800', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_32881302259149ca80af308_26235685', "content");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block 'localstyle'} */
-class Block_27009844659022225a06a15_59769757 extends Smarty_Internal_Block
+class Block_180088294259149ca80a4e80_98564455 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_27009844659022225a06a15_59769757',
+    0 => 'Block_180088294259149ca80a4e80_98564455',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -65,12 +65,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'localstyle'} */
 /* {block "content"} */
-class Block_10645397759022225a11581_35902800 extends Smarty_Internal_Block
+class Block_32881302259149ca80af308_26235685 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_10645397759022225a11581_35902800',
+    0 => 'Block_32881302259149ca80af308_26235685',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -113,7 +113,7 @@ ob_start();
         <tr>
             <td>Password:</td>
             <td>
-                <input class="form-control" type="text" name="password"
+                <input class="form-control" type="password" name="password"
                        value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['password']->value)===null||$tmp==='' ? '' : $tmp);?>
 " />
                 <span class="error"><?php echo $_smarty_tpl->tpl_vars['validator']->value->error_message('password');?>
@@ -123,9 +123,11 @@ ob_start();
         <tr>
             <td>Confirm Password:</td>
             <td>
-                <input class="form-control" type="text" name="password_confirm"
+                <input class="form-control" type="password" name="password_confirm"
                        value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['password_confirm']->value)===null||$tmp==='' ? '' : $tmp);?>
 " />
+                <span class="error"><?php echo $_smarty_tpl->tpl_vars['validator']->value->error_message('password_confirm');?>
+</span>
             </td>
         </tr>
         <tr>

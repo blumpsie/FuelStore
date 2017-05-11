@@ -40,7 +40,7 @@
         <tr>
             <td>Password:</td>
             <td>
-                <input class="form-control" type="text" name="password"
+                <input class="form-control" type="password" name="password"
                        value="{$password|default}" />
                 <span class="error">{$validator->error_message('password')}</span>
             </td>
@@ -48,8 +48,9 @@
         <tr>
             <td>Confirm Password:</td>
             <td>
-                <input class="form-control" type="text" name="password_confirm"
+                <input class="form-control" type="password" name="password_confirm"
                        value="{$password_confirm|default}" />
+                <span class="error">{$validator->error_message('password_confirm')}</span>
             </td>
         </tr>
         <tr>

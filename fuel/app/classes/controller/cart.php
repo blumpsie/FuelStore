@@ -5,6 +5,7 @@ class Controller_Cart extends Controller_Base {
     parent::before();
     if (is_null(Session::get('cart'))) {
       Session::set('cart', []);
+      $itemsInCart = false;
     }
   }
 
@@ -22,30 +23,43 @@ class Controller_Cart extends Controller_Base {
   
   public function action_index() {
     $cart = Session::get('cart');
-    $itemsInCart = true;
+    $itemsInCart = true; // Need otherwise PHP throws a hissy fit about 
+                         // undefined variable
+    
+    $product_id = Input::get('product_id');
+    $quantity = Input::get('quantity');
+    
+    if(Session::get('cart') == [])
+    {
+        $itemsInCart = false;
+    }
+    // logic for adding to the cart
+    if(isset($product_id))
+    {
+        $cart[$product_id] = $quantity;
+        Session::set('cart', $cart);
+        $itemsInCart = true;
+    }
     
     // logic for deleting from the cart
-    if (!is_null($product) && $quantity == 0)
+    if (!is_null($product_id) && $quantity == 0)
     {
-        Session::delete($product_id);
-        if(is_null(Session::get('cart')))
+        unset($cart[$product_id]);
+        Session::set('cart', $cart);
+        if(Session::get('cart') == [])
         {
             $itemsInCart = false;
         }
     }
     
-    // logic for adding to the cart
-    if (!is_null($product_id) && $quantity != 0)
-    {
-        $cart[$product_id] = $quantity;
-        Session::set('cart', $cart);
-    }
-    
     // creating the cart
     $cart_info = [];
+
     foreach (Session::get('cart') as $key => $value)
     {
-        $product = R::load('product', $key);
+         
+        $product = Model_Product::find($key);
+       
         $cart_info[$key]= [ 
                 'name' => $product->name, 
                 'price' => $product->price, 
@@ -58,12 +72,15 @@ class Controller_Cart extends Controller_Base {
     $total_price = 0;
     foreach ($cart_info as $key => $value)
     {
-        $total += $value['subtotal'];
+        $total_price += $value['subtotal'];
     }
     $data = [
         'cart_info' => $cart_info,
         'total_price' => $total_price,
-        'itemsinCart' => $ItemsinCart,
+        'itemsInCart' => $itemsInCart,
+        'cart' => Session::get('cart'),
+        'product_id' => $product_id,
+        'quantity' => $quantity,
     ];
 
     return View::forge('cart/index.tpl', $data);

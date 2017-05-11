@@ -23,10 +23,8 @@
 {block name="content"}
 
   <div class='top'>
-      {$category}
-      {$order}
     <h2>Products</h2>
-    {form}
+    {form attrs = ['method' => 'get', 'action' => "/home/setCategory"]}
       <button type="submit">Filter by Category:</button>
       <select name="category">
           {html_options options=$categories selected=$category}

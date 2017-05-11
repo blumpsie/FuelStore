@@ -32,7 +32,8 @@
 
   <div class="action">
       {if not $session->get('login') or not $session->get('login')->is_admin}
-        {form attrs=[action=>"#", method=>"get"]}
+        {form attrs=[action=>"cart/index", method=>"get"]}
+            <input type='hidden' name='product_id' value="{$product->id}" />
             <b>Selected quantity</b>
             <br />
             <select name='quantity'>

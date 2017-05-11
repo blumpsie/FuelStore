@@ -19,7 +19,7 @@ Author: Mark Erickson
 {block name="content"}
     <h2>Modify Product</h2>
     
-    {form attrs=['action' => "/admin/modifyProductReentrant/{$product_id}}"]}
+    {form attrs=['action' => "/admin/modifyProductReentrant/{$product_id}"]}
         
         <table class="table-condensed table">
             <tr>
@@ -45,9 +45,7 @@ Author: Mark Erickson
             <tr>
                 <td>Description:</td>
                 <td>
-                    <textarea class="form-control" name="description" rows="10">
-                        {$description|default}
-                    </textarea>
+                    <textarea class="form-control" name="description" rows="10">{$description|default}</textarea>
                 </td>
             </tr>
             <tr>

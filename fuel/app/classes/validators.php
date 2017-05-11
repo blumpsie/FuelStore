@@ -149,9 +149,25 @@ class Validators {
         ->add_rule('valid_email')
     ;
     
-    $validator->add('price', 'price')
+    $validator->add('password', 'password')
         ->add_rule('trim')
         ->add_rule('required')
+        ->add_rule('min_length', 3)
     ;
+    
+    $validator->add('password_confirm', 'password_confirm')
+        ->add_rule('trim')
+        ->add_rule('required')
+        ->add_rule('match_field', 'password')
+    ;
+    
+    $validator
+        ->set_message('required', ':label cannot be empty')
+        ->set_message('min_length', 'at least :param:1 char(s)')
+        ->set_message('image_file_exists', 'image file does not exist')
+        ->set_message('unique', 'a duplicate exists')
+        ->set_message('match_field', 'passwords don\'t match')
+    ;
+    return $validator;
   }
 }

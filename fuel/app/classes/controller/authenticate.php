@@ -76,18 +76,18 @@ class Controller_Authenticate extends Controller_Base {
           return Response::redirect("/");
       }
       
-      //$validator = Validators::createLoginValidator();
+      $validator = Validators::createLoginValidator();
       
       $message = "";
       try
       {
-          /*$validated = $validator->run(Input::post());
+          $validated = $validator->run(Input::post());
           if (!$validated) 
           {
               throw new Exception();
           }
           $validData = $validator->validated();
-          */
+          
           $user = Model_User::forge();
           $password = Input::post('password');
           $user->name = Input::post('name');
@@ -108,7 +108,7 @@ class Controller_Authenticate extends Controller_Base {
       ];
       
       $view = View::forge("authenticate/createLogin.tpl", $data);
-      //$view->set_safe('validator', $validator);
+      $view->set_safe('validator', $validator);
       return $view;
   }
 }

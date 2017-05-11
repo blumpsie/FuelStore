@@ -35,7 +35,7 @@
         
         {foreach $cart_info as $key => $value}
          <tr>
-            <td><a href="productSelect.php?product_id={$key}">{$value['name']}</a></td> 
+            <td>{html_anchor href="/cart/show/{$key}" text="{$value['name']}"}</td> 
             <td>${number_format($value['price'], 2, ".","")}</td>
             <td>{$value['quantity']}</td>
             <td>${number_format($value['subtotal'], 2, ".", "")}</td>
@@ -45,14 +45,14 @@
             <td>Total:</td>
             <td></td>
             <td></td>
-            <td>${number_format($total, 2, ".", "")}</td>
+            <td>${number_format($total_price, 2, ".", "")}</td>
         </tr>
-        {if $session->login}
+        {if $session->get('login')}
         <tr>
             <td>
-                <form action="placeOrder.php">
+                {form attrs=['action' => 'user/placeOrder']}
                     <button type="submit">Place Order</button>
-                </form>
+                {/form}
             </td>
         </tr>
         {/if}

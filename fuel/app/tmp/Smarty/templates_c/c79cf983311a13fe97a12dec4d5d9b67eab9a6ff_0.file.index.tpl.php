@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-05-03 10:40:15
+/* Smarty version 3.1.31, created on 2017-05-09 16:05:03
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\home\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5909ebcfdc13e4_77012215',
+  'unifunc' => 'content_591220ef9acac0_56104727',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c79cf983311a13fe97a12dec4d5d9b67eab9a6ff' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\home\\index.tpl',
-      1 => 1493822402,
+      1 => 1494360265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5909ebcfdc13e4_77012215 (Smarty_Internal_Template $_smarty_tpl) {
+function content_591220ef9acac0_56104727 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\vendor\\smarty\\smarty\\libs\\plugins\\function.html_options.php';
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
@@ -28,23 +28,23 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11903697205909ebcfcd81b4_84574637', "localstyle");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1974120590591220ef8ea395_26882818', "localstyle");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11398766055909ebcfce30b8_19023425', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1024017811591220ef8f3544_86039735', "content");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "localstyle"} */
-class Block_11903697205909ebcfcd81b4_84574637 extends Smarty_Internal_Block
+class Block_1974120590591220ef8ea395_26882818 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_11903697205909ebcfcd81b4_84574637',
+    0 => 'Block_1974120590591220ef8ea395_26882818',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -72,12 +72,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "localstyle"} */
 /* {block "content"} */
-class Block_11398766055909ebcfce30b8_19023425 extends Smarty_Internal_Block
+class Block_1024017811591220ef8f3544_86039735 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_11398766055909ebcfce30b8_19023425',
+    0 => 'Block_1024017811591220ef8f3544_86039735',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -85,18 +85,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 
   <div class='top'>
-      <?php echo $_smarty_tpl->tpl_vars['category']->value;?>
-
-      <?php echo $_smarty_tpl->tpl_vars['order']->value;?>
-
     <h2>Products</h2>
     <?php $_block_plugin1 = isset($_smarty_tpl->smarty->registered_plugins['block']['form'][0][0]) ? $_smarty_tpl->smarty->registered_plugins['block']['form'][0][0] : null;
 if (!is_callable(array($_block_plugin1, 'form'))) {
 throw new SmartyException('block tag \'form\' not callable or registered');
 }
-$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('form', array());
+$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('form', array('attrs'=>array('method'=>'get','action'=>"/home/setCategory")));
 $_block_repeat=true;
-echo $_block_plugin1->form(array(), null, $_smarty_tpl, $_block_repeat);
+echo $_block_plugin1->form(array('attrs'=>array('method'=>'get','action'=>"/home/setCategory")), null, $_smarty_tpl, $_block_repeat);
 while ($_block_repeat) {
 ob_start();
 ?>
@@ -107,7 +103,7 @@ ob_start();
 
       </select>
     <?php $_block_repeat=false;
-echo $_block_plugin1->form(array(), ob_get_clean(), $_smarty_tpl, $_block_repeat);
+echo $_block_plugin1->form(array('attrs'=>array('method'=>'get','action'=>"/home/setCategory")), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
 array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 

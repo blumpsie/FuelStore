@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-05-03 10:53:18
+/* Smarty version 3.1.31, created on 2017-05-04 15:14:59
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\admin\modifyProduct.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5909eedea4cf13_96279535',
+  'unifunc' => 'content_590b7db3f32060_13030935',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ca75e4380c9c3bd674e46ac29be91022b9254d1d' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\admin\\modifyProduct.tpl',
-      1 => 1493823190,
+      1 => 1493925271,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5909eedea4cf13_96279535 (Smarty_Internal_Template $_smarty_tpl) {
+function content_590b7db3f32060_13030935 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\vendor\\smarty\\smarty\\libs\\plugins\\function.html_options.php';
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
@@ -30,23 +30,23 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15445911565909eede972d44_34607172', "localstyle");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1453993292590b7db3e388d7_13208794', "localstyle");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12627423615909eede97cb70_15297798', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1039176609590b7db3e73865_54687780', "content");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "localstyle"} */
-class Block_15445911565909eede972d44_34607172 extends Smarty_Internal_Block
+class Block_1453993292590b7db3e388d7_13208794 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_15445911565909eede972d44_34607172',
+    0 => 'Block_1453993292590b7db3e388d7_13208794',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -65,12 +65,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "localstyle"} */
 /* {block "content"} */
-class Block_12627423615909eede97cb70_15297798 extends Smarty_Internal_Block
+class Block_1039176609590b7db3e73865_54687780 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_12627423615909eede97cb70_15297798',
+    0 => 'Block_1039176609590b7db3e73865_54687780',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -82,9 +82,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable(array($_block_plugin1, 'form'))) {
 throw new SmartyException('block tag \'form\' not callable or registered');
 }
-$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('form', array('attrs'=>array('action'=>"/admin/modifyProductReentrant/".((string)$_smarty_tpl->tpl_vars['product_id']->value)."}")));
+$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('form', array('attrs'=>array('action'=>"/admin/modifyProductReentrant/".((string)$_smarty_tpl->tpl_vars['product_id']->value))));
 $_block_repeat=true;
-echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/modifyProductReentrant/".((string)$_smarty_tpl->tpl_vars['product_id']->value)."}")), null, $_smarty_tpl, $_block_repeat);
+echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/modifyProductReentrant/".((string)$_smarty_tpl->tpl_vars['product_id']->value))), null, $_smarty_tpl, $_block_repeat);
 while ($_block_repeat) {
 ob_start();
 ?>
@@ -117,10 +117,8 @@ ob_start();
             <tr>
                 <td>Description:</td>
                 <td>
-                    <textarea class="form-control" name="description" rows="10">
-                        <?php echo (($tmp = @$_smarty_tpl->tpl_vars['description']->value)===null||$tmp==='' ? '' : $tmp);?>
-
-                    </textarea>
+                    <textarea class="form-control" name="description" rows="10"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['description']->value)===null||$tmp==='' ? '' : $tmp);?>
+</textarea>
                 </td>
             </tr>
             <tr>
@@ -141,7 +139,7 @@ ob_start();
             </tr>
         </table>
     <?php $_block_repeat=false;
-echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/modifyProductReentrant/".((string)$_smarty_tpl->tpl_vars['product_id']->value)."}")), ob_get_clean(), $_smarty_tpl, $_block_repeat);
+echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/modifyProductReentrant/".((string)$_smarty_tpl->tpl_vars['product_id']->value))), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
 array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 

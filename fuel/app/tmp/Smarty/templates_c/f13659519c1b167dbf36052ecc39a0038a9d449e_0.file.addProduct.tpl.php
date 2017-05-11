@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-04-24 16:17:28
+/* Smarty version 3.1.31, created on 2017-05-09 09:40:45
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\admin\addProduct.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_58fe5d5800fc64_15377606',
+  'unifunc' => 'content_5911c6dd6ec6e7_51489937',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f13659519c1b167dbf36052ecc39a0038a9d449e' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\admin\\addProduct.tpl',
-      1 => 1493065009,
+      1 => 1494337230,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58fe5d5800fc64_15377606 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5911c6dd6ec6e7_51489937 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\vendor\\smarty\\smarty\\libs\\plugins\\function.html_options.php';
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
@@ -30,21 +30,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_120527571358fe5d57e927a6_59871016', 'localstyle');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9911378725911c6dd628098_07154273', 'localstyle');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_100567876558fe5d57e9cb78_59194872', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4708752735911c6dd6342c3_36244211', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block 'localstyle'} */
-class Block_120527571358fe5d57e927a6_59871016 extends Smarty_Internal_Block
+class Block_9911378725911c6dd628098_07154273 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_120527571358fe5d57e927a6_59871016',
+    0 => 'Block_9911378725911c6dd628098_07154273',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -64,20 +64,19 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'localstyle'} */
 /* {block "content"} */
-class Block_100567876558fe5d57e9cb78_59194872 extends Smarty_Internal_Block
+class Block_4708752735911c6dd6342c3_36244211 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_100567876558fe5d57e9cb78_59194872',
+    0 => 'Block_4708752735911c6dd6342c3_36244211',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
     <h2>Add Product</h2>
-    <?php echo (($tmp = @$_smarty_tpl->tpl_vars['gravity']->value)===null||$tmp==='' ? '' : $tmp);?>
-
+    
     <?php $_block_plugin1 = isset($_smarty_tpl->smarty->registered_plugins['block']['form'][0][0]) ? $_smarty_tpl->smarty->registered_plugins['block']['form'][0][0] : null;
 if (!is_callable(array($_block_plugin1, 'form'))) {
 throw new SmartyException('block tag \'form\' not callable or registered');
@@ -121,10 +120,7 @@ ob_start();
         <tr>
             <td>Description: </td>
             <td>
-                <textarea class="form-control" name="description" rows="10"
-                              value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['description']->value)===null||$tmp==='' ? '' : $tmp);?>
-">
-                </textarea>
+                <textarea class="form-control" name="description" rows="10"></textarea>
             </td>
         </tr>
         <tr>

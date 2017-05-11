@@ -208,7 +208,7 @@ class Controller_Admin extends Controller_Base {
             'category' => $product->category->name,
             'price' => $product->price,
             'description' => $product->description,
-            'photo' => $product->photo->id,
+            'photo' => $product->photo_id,
             'product_id' => $product_id,
         ];
         
@@ -240,10 +240,10 @@ class Controller_Admin extends Controller_Base {
             $validData = $validator->validated();
             
             $product->name = $validData['name'];
-            $product->category_id = $validData['category_id'];
+            $product->category_id = $product->category_id;
             $product->price = $validData['price'];
             $product->description = $validData['description'];
-            $product->photo_id = $validData['photo_id'];
+            $product->photo_id = $product->photo_id;
             $product->save();
             
             return Response::redirect("/cart/show/$product->id");
@@ -260,7 +260,7 @@ class Controller_Admin extends Controller_Base {
             'description' => Input::post('description'),
             'photo' => Input::post('photo_id'),
             'product_id' => $product_id,
-            'photo' => $product->photo->id,
+            'photo' => $product->photo_id,
             'message' => $message,
         ];
         
