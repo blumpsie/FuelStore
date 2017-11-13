@@ -66,8 +66,7 @@ Author: Mark Erickson
     
     {if $session->get('login')->is_admin}
     <div class='action'>
-        {form attrs=['action' => "/admin/removeOrder/{$order->id}", 
-                'method'=>'get']}
+        {form attrs=['action' => "/admin/removeOrder/{$order->id}"]}
             <button type='submit'>
                 {{session_get_flash var='button_title'}|default:'Remove'}
             </button>

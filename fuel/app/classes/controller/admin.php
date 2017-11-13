@@ -258,7 +258,7 @@ class Controller_Admin extends Controller_Base {
             'category' => $product->category->name,
             'price' => Input::post('price'),
             'description' => Input::post('description'),
-            'photo' => Input::post('photo_id'),
+            //'photo' => Input::post('photo_id'),
             'product_id' => $product_id,
             'photo' => $product->photo_id,
             'message' => $message,

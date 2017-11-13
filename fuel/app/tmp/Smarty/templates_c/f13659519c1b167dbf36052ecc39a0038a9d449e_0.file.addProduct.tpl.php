@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-05-09 09:40:45
+/* Smarty version 3.1.31, created on 2017-05-11 16:20:12
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\admin\addProduct.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5911c6dd6ec6e7_51489937',
+  'unifunc' => 'content_5914c77c9a0175_68837063',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f13659519c1b167dbf36052ecc39a0038a9d449e' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\admin\\addProduct.tpl',
-      1 => 1494337230,
+      1 => 1494345341,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5911c6dd6ec6e7_51489937 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5914c77c9a0175_68837063 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\vendor\\smarty\\smarty\\libs\\plugins\\function.html_options.php';
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
@@ -30,21 +30,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9911378725911c6dd628098_07154273', 'localstyle');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1362367315914c77c8de309_37146714', 'localstyle');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4708752735911c6dd6342c3_36244211', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1211863675914c77c8eb1d7_07584469', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block 'localstyle'} */
-class Block_9911378725911c6dd628098_07154273 extends Smarty_Internal_Block
+class Block_1362367315914c77c8de309_37146714 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_9911378725911c6dd628098_07154273',
+    0 => 'Block_1362367315914c77c8de309_37146714',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -64,12 +64,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'localstyle'} */
 /* {block "content"} */
-class Block_4708752735911c6dd6342c3_36244211 extends Smarty_Internal_Block
+class Block_1211863675914c77c8eb1d7_07584469 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_4708752735911c6dd6342c3_36244211',
+    0 => 'Block_1211863675914c77c8eb1d7_07584469',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -97,6 +97,7 @@ ob_start();
 " />
                 <span class="error"><?php echo $_smarty_tpl->tpl_vars['validator']->value->error_message('name');?>
 </span>
+            </td>
         </tr>
         <tr>
             <td>Category:</td>

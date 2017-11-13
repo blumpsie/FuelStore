@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-04-24 12:50:58
+/* Smarty version 3.1.31, created on 2017-05-11 16:12:59
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\admin\addCategory.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_58fe2cf2934932_62634262',
+  'unifunc' => 'content_5914c5cb838091_28423718',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c8803f9ee8acdfb822347cb7e4fd2581e0d9b9f2' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\admin\\addCategory.tpl',
-      1 => 1493052647,
+      1 => 1494533575,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58fe2cf2934932_62634262 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5914c5cb838091_28423718 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,21 +29,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_186387208958fe2cf287b331_77780649', 'localstyle');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5146792675914c5cb77c5f9_78145249', 'localstyle');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_60086730858fe2cf28863c3_69247355', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_570754695914c5cb788002_38030876', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block 'localstyle'} */
-class Block_186387208958fe2cf287b331_77780649 extends Smarty_Internal_Block
+class Block_5146792675914c5cb77c5f9_78145249 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_186387208958fe2cf287b331_77780649',
+    0 => 'Block_5146792675914c5cb77c5f9_78145249',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -63,12 +63,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'localstyle'} */
 /* {block "content"} */
-class Block_60086730858fe2cf28863c3_69247355 extends Smarty_Internal_Block
+class Block_570754695914c5cb788002_38030876 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_60086730858fe2cf28863c3_69247355',
+    0 => 'Block_570754695914c5cb788002_38030876',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -92,6 +92,7 @@ ob_start();
             <td><h4><strong>Current Categories:</strong></h4></td>
         </tr>
         <tr>
+            <td>
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'category');
 if ($_from !== null) {
@@ -105,8 +106,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 ?>
 
+            </td>
         </tr>
-        <tr>
+        
         <tr>
             <td>Name of Category:</td>
             <td>

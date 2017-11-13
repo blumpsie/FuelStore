@@ -25,11 +25,13 @@ author: Mark Erickson
             <td><h4><strong>Current Categories:</strong></h4></td>
         </tr>
         <tr>
+            <td>
             {foreach $categories as $category}
                 -- <strong>{$category}</strong><br />
             {/foreach}
+            </td>
         </tr>
-        <tr>
+        
         <tr>
             <td>Name of Category:</td>
             <td>

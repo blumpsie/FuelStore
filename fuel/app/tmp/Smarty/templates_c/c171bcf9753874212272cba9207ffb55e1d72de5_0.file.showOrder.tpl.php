@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.31, created on 2017-04-26 13:08:21
+/* Smarty version 3.1.31, created on 2017-05-11 16:27:37
   from "C:\Users\Blumpsie\Documents\User Interfaces - CSC 417\FuelStore\fuel\app\views\home\showOrder.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.31',
-  'unifunc' => 'content_5900d4056c03c0_86179078',
+  'unifunc' => 'content_5914c939410490_81941311',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c171bcf9753874212272cba9207ffb55e1d72de5' => 
     array (
       0 => 'C:\\Users\\Blumpsie\\Documents\\User Interfaces - CSC 417\\FuelStore\\fuel\\app\\views\\home\\showOrder.tpl',
-      1 => 1493226405,
+      1 => 1494534450,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5900d4056c03c0_86179078 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5914c939410490_81941311 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -29,21 +29,21 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_95891645900d405546568_61261635', "localstyle");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12621655275914c9392e8781_81073302', "localstyle");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7880634585900d405556b80_79434326', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12457663895914c9392f5260_54370747', "content");
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "layout.tpl");
 }
 /* {block "localstyle"} */
-class Block_95891645900d405546568_61261635 extends Smarty_Internal_Block
+class Block_12621655275914c9392e8781_81073302 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'localstyle' => 
   array (
-    0 => 'Block_95891645900d405546568_61261635',
+    0 => 'Block_12621655275914c9392e8781_81073302',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -68,12 +68,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "localstyle"} */
 /* {block "content"} */
-class Block_7880634585900d405556b80_79434326 extends Smarty_Internal_Block
+class Block_12457663895914c9392f5260_54370747 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7880634585900d405556b80_79434326',
+    0 => 'Block_12457663895914c9392f5260_54370747',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -144,9 +144,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 if (!is_callable(array($_block_plugin1, 'form'))) {
 throw new SmartyException('block tag \'form\' not callable or registered');
 }
-$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('form', array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id),'method'=>'get')));
+$_smarty_tpl->smarty->_cache['_tag_stack'][] = array('form', array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id))));
 $_block_repeat=true;
-echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id),'method'=>'get')), null, $_smarty_tpl, $_block_repeat);
+echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id))), null, $_smarty_tpl, $_block_repeat);
 while ($_block_repeat) {
 ob_start();
 ?>
@@ -162,7 +162,7 @@ echo (($tmp = @$_prefixVariable1)===null||$tmp==='' ? 'Remove' : $tmp);?>
                    value='<?php echo $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['session_get_flash'][0][0]->session_get_flash(array('var'=>'confirm'),$_smarty_tpl);?>
 ' />
         <?php $_block_repeat=false;
-echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id),'method'=>'get')), ob_get_clean(), $_smarty_tpl, $_block_repeat);
+echo $_block_plugin1->form(array('attrs'=>array('action'=>"/admin/removeOrder/".((string)$_smarty_tpl->tpl_vars['order']->value->id))), ob_get_clean(), $_smarty_tpl, $_block_repeat);
 }
 array_pop($_smarty_tpl->smarty->_cache['_tag_stack']);?>
 
